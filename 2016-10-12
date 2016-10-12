@@ -1,0 +1,16 @@
+git init hello-world
+# 建立新的repostory
+cd hello-world
+touch hello.py
+# 建立hello.py / pc中打开
+
+
+
+
+@app.route("/user/<username>")
+def show_profile(username):
+  check_signed_in()
+  return welcome to {}'s page".formate(username)
+  
+if__name__ = "__main__":
+  app.run()
