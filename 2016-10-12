@@ -13,5 +13,5 @@ def show_profile(username):
   check_signed_in()
   return welcome to {}'s page".formate(username)
   
-if__name__ = "__main__":
+if__name__ == "__main__":
   app.run()
