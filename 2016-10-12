@@ -1,3 +1,4 @@
+“vm中”
 git init hello-world
 # 建立新的repostory
 cd hello-world
@@ -6,7 +7,7 @@ touch hello.py
 
 
 
-
+“py中”
 @app.route("/user/<username>")
 def show_profile(username):
   check_signed_in()
