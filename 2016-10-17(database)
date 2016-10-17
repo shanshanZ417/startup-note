@@ -1,0 +1,34 @@
+#进入vm
+sudo apt-get update && sudo apt-get install sqlite3
+#install sqlite3
+
+which sqlite3
+
+sqlite3 test.db
+#创建db
+
+CREATE TABLE people (id int, first string, last string);
+
+.tables
+#which table are here
+
+.schema people
+#structure of people table
+
+INSERT INTO people (id, first, last) VALUES (1, "Adian", "Feldman");
+INSERT INTO people (id, first, last) VALUES (2, "Tom", "Ristenpart");
+INSERT INTO people (id, first, last) VALUES (3, "Akshay", "Bhat");
+
+SELECT * FROM people;
+
+SELECT * FROM people;
+
+SELECT COUNT(*) FROM people;
+
+SELECT * FROM people WHERE first = "Tom";
+
+DROP TABLE people;
+
+
+CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, first string, last string);
+#赋值的时候就不用1，2，3了，自动做好。
