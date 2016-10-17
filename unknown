@@ -1,0 +1,11 @@
+
+doubler = lamda x: print('doubling',x)
+numbers = [1,2,3,4]
+results = map(doubler,numbers)
+
+
+
+vm gitpython3
+
+def myfunc(input1,inpu2):
+    
