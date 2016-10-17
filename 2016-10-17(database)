@@ -1,3 +1,5 @@
+#################################################################################################
+############################vm模式下面运行sqlite3#################################################
 #进入vm
 sudo apt-get update && sudo apt-get install sqlite3
 #install sqlite3
@@ -32,3 +34,35 @@ DROP TABLE people;
 
 CREATE TABLE people (id INTEGER PRIMARY KEY AUTOINCREMENT, first string, last string);
 #赋值的时候就不用1，2，3了，自动做好。
+
+(ls *.db
+#
+)
+#######################################################################################################
+##########################python模式下运行sqlite3#######################################################
+https://docs.python.org/2/library/sqlite3.html
+#document
+
+.exit
+#退出sqlite3模式
+python3
+import sqlite3
+conn = sqlite3.connect('test.db')
+c = conn.cursor()
+c.execute('SELECT * FROM people;')
+c.fetchone()
+>>>(1, 'Adian', 'Feldman')
+c.fetchone()
+>>>(2, 'Tom', 'Ristenpart')
+c.fetchone()
+>>>(3, 'Akshay', 'Bhat')
+c.fetchone()
+for person in c.execute('SELECT *FROM people;'):
+  print(person)
+>>>
+(1, 'Adian', 'Feldman')
+(2, 'Tom', 'Ristenpart')
+(3, 'Akshay', 'Bhat')
+
+conn.commit()
+#创建完table之后要commit
