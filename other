@@ -1,0 +1,2 @@
+sudo chmod 777 /usr/local/lib/python3.5/dist-packages/
+#如果出现了Permission denied的问题，说明权限不够，那么用上述命令sudo chmod 777 + denied的路径就能把权限修改成能读能写能excute的模式
