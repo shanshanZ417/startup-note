@@ -1,0 +1,4 @@
+. venv/bin/activate
+#打开使用flask
+deactivate
+#关闭flask
