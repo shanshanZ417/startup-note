@@ -1,2 +1,15 @@
 sudo chmod 777 /usr/local/lib/python3.5/dist-packages/
 #如果出现了Permission denied的问题，说明权限不够，那么用上述命令sudo chmod 777 + denied的路径就能把权限修改成能读能写能excute的模式
+
+pip3 uninstall flask
+pip3 install flask
+#如果在某个路径下安装的某个package，比如flask，然后你删掉这个安装的folder，系统找不到flask文件。需要uninstall再install一遍就好
+
+sudo easy_install virtualenv / sudo pip install virtualenv
+virtualenv venv 
+. venv/bin/activate
+# virtualenv需要在每一个project folder下面安装一遍，为的是保证每一个project都有自己的环境，在venv模式下面pip install的所有东西都是这个project自己管
+理的package。如果在非venv模式之下就是安装的全局package，所有人都能用。virtualenv可以防止dependency混乱。
+# windows问题:“virtualenv venv”出现shutil.Error: 要With --always-copy flag
+
+
